@@ -5,4 +5,3 @@ prepareCredentials: headers for: urlObject method: method
 			[ cred setAuthorizationHeader: headers for: urlObject method: method ]
 				on: Error
 				do: self errorHandler ] ]
-	

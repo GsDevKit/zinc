@@ -10,4 +10,3 @@ handleRequest: request
 			statusLine: (ZnStatusLine ok);
 			headers: ZnHeaders defaultResponseHeaders;
 			yourself).
-

@@ -9,4 +9,3 @@ fieldName: fieldName fileNamed: fileName
 	(entity := ZnStreamingEntity type: mimeType length: size)
 		stream: fileStream.
 	^ self fieldName: fieldName fileName: entry name entity: entity
-	

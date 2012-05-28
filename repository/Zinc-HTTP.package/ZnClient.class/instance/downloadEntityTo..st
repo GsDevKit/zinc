@@ -13,5 +13,5 @@ downloadEntityTo: path
 	FileStream 
 		fileNamed: target 
 		do: [ :fileStream |
-			fileStream binary.
+		"	fileStream binary."
 			self entity writeOn: fileStream ]

@@ -4,4 +4,3 @@ socketStreamToHostNamed: hostName port: port
 	stream := SocketStream openConnectionToHostNamed: hostName port: port.
 	self setSocketStreamParameters: stream.  
 	^ stream
-	

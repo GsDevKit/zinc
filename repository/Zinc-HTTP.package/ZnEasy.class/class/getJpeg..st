@@ -5,5 +5,4 @@ getJpeg: urlObject
 	^ self 
 		getImageOfType: ZnMimeType imageJpeg 
 		usingParser: JPEGReadWriter 
-		fromUrl: urlObject 
-	
+		fromUrl: urlObject

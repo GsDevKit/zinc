@@ -8,4 +8,3 @@ getImageOfType: mimeType usingParser: parserClass fromUrl: urlObject
 		enforceAcceptContentType: true;
 		get.
 	^ (parserClass on: client entity readStream) nextImage
-	

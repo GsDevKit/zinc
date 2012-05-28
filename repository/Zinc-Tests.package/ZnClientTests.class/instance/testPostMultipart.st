@@ -2,7 +2,7 @@ testing
 testPostMultipart
 	| client filename |
 	filename := (FileDirectory default / 'testPostMultiPart.txt') fullName.
-	FileDirectory default fileNamed: filename do: [ :stream | stream nextPutAll: '0123456789' ].
+	FileDirectory default newFileNamed: filename do: [ :stream | stream nextPutAll: '0123456789' ].
 	self withServerDo: [ :server |
 		(client := ZnClient new)
 			url: server localUrl;

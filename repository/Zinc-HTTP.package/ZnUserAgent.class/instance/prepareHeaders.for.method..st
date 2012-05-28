@@ -10,4 +10,3 @@ prepareHeaders: headerCollection for: urlObject method: method
 		headers at: 'Cookie' add: cookie nameValueString ].
 	self prepareCredentials: headers for: urlObject method: method.
 	^ headers
-	

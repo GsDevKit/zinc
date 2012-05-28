@@ -10,5 +10,4 @@ at: key add: value
 			existingValue isArray 
 				ifTrue: [ existingValue copyWith: value ]
 				ifFalse: [ Array with: existingValue with: value ] ].
-	^ self at: key put: newValue 
-
+	^ self at: key put: newValue

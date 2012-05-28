@@ -5,4 +5,3 @@ systemVersionInfo
 				print: SystemVersion current; 
 				nextPutAll: ' - '; 
 				nextPutAll: ZnConstants defaultServerString ]
-	

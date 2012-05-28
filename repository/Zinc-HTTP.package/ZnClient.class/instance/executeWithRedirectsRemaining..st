@@ -12,4 +12,3 @@ executeWithRedirectsRemaining: redirectCount
 					self followRedirects 
 						ifTrue: [ ZnTooManyRedirects signal ] ] ].
 	^ self handleResponse
-	

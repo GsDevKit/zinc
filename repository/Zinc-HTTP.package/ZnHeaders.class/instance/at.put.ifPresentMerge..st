@@ -9,6 +9,4 @@ at: headerName put: value ifPresentMerge: binaryBlock
 	newValue := existingValue isNil
 		ifTrue: [ value ] 
 		ifFalse: [ binaryBlock value: existingValue value: value ].
-	^ self headers at: normalizedKey put: newValue 
-		
-
+	^ self headers at: normalizedKey put: newValue

@@ -11,6 +11,3 @@ isCapitalizedString: string
 					ifFalse: [ ^ false ] ] 
 		 	ifFalse: [ capitalExpected := true ] ].
 	^ true
-
-
-

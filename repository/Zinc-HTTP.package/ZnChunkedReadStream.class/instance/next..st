@@ -1,8 +1,9 @@
-accessing
-next: requestedCount 
-	"Read requestedCount elements into new collection and return it,
-	 it could be that less elements were available"
+as yet unclassified
+next: anInteger 
+	"We use our own collectionSpecies."
 
-	^ self 
-		next: requestedCount 
-		into: (self collectionSpecies new: requestedCount)
+	^ self collectionSpecies streamContents: [ :out | | count |
+		count :=0.
+		[ self atEnd or: [ count >= anInteger ] ] whileFalse: [
+			out nextPut: self next.
+			count := count + 1 ] ]
