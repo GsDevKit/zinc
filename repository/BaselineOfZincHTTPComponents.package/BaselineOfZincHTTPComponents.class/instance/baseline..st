@@ -15,6 +15,7 @@ baseline: spec
               spec
                 versionString: #'stable';
                 repository: 'http://mc.stfx.eu/Neo' ].
+
       spec
         package: 'Zinc-Character-Encoding-Core';
         package: 'Zinc-Character-Encoding-Tests'
@@ -33,7 +34,7 @@ baseline: spec
           with: [ spec requires: #('Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests') ];
         package: 'Zodiac-Core';
         package: 'Zodiac-Tests' with: [ spec requires: 'Zodiac-Core' ];
-        package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP' ];
+        package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP'];
         package: 'Zinc-WebSocket-Tests'
           with: [ spec requires: 'Zinc-WebSocket-Core' ];
         package: 'Zinc-SSO-OAuth1-Core'
@@ -118,10 +119,16 @@ baseline: spec
           with: [ 
               spec
                 version: '0.9.2';
-                repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ].
+                repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
+	  configuration: 'Cryptography'
+          with: [ 
+              spec
+                versionString: #'stable';
+                repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ].
       spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+        package: 'Zinc-WebSocket-Core' with: [ spec requires: #('Zinc-HTTP' 'Cryptography')];
         package: 'Zinc-HTTP'
           with: [ 
               spec
@@ -145,6 +152,8 @@ baseline: spec
           with: [ spec includes: 'Zinc-Character-Encoding-GS3-Tests' ];
         package: 'Zinc-Character-Encoding-GS3-Tests'
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
+        package: 'Zinc-WebSocket-Core' 
+		with: [ spec requires: #('Zinc-HTTP' 'Cryptography')]; 
         yourself ].
   spec
     for: #(#'gs2.x' #'gs3.0.x')
@@ -171,5 +180,5 @@ baseline: spec
         package: 'Zinc-Character-Encoding-Core'
           with: [ spec includes: 'Zinc-Character-Encoding-GS32-Core' ];
         package: 'Zinc-Character-Encoding-GS32-Core'
-          with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
+          with: [ spec requires: 'Zinc-Character-Encoding-Core' ]; 
         yourself ]
