@@ -10,6 +10,12 @@ httpDate: object
 		stream nextPutAll: (utc dayOfMonth printStringLength: 2 padded: true).
 		stream space; nextPutAll: utc monthAbbreviation; space.
 		utc year printOn: stream.
-		stream space.
-		utc printHMSOn: stream.
-		stream nextPutAll: ' GMT' ]
+		stream
+			space;
+			nextPutAll: (utc hour asString padded: #left to: 2 with: $0);
+			nextPut: $:;
+			nextPutAll: (utc minute asString padded: #left to: 2 with: $0);
+			nextPut: $:;
+			nextPutAll: (utc second asInteger asString padded: #left to: 2 with: $0);
+			space;
+			nextPutAll: 'GMT' ]
