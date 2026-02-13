@@ -1,5 +1,6 @@
 testing
 testEcho
+  "Needs to be executed in ZnGsWebSocketTests context"
   | webSocket message gemServer |
   gemServer := self createGemServerMap: 'ws-echo' to: ZnWebSocketEchoHandler new.
   self

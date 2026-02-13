@@ -1,10 +1,7 @@
 testing
 testEchoSecureWebSocketsDotOrg
+	"Needs to be executed in ZnGsWebSocketTests context"
 	| webSocket message |
-	true
-		ifTrue: [ 
-			"echo.websocket.org is no longer available. See https://github.com/GsDevKit/zinc/issues/96"
-			^ self ].
 	(Smalltalk at: #'GsSecureSocket') disableCertificateVerificationOnClient.
 	webSocket := self webSocketClass to: 'wss://echo.websocket.org'.
 	message := 'Greetings from Gemstone Smalltalk @ ' , TimeStamp now printString.

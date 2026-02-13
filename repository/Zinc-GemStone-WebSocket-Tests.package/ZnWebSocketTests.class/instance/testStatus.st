@@ -1,5 +1,6 @@
 testing
 testStatus
+  "Needs to be executed in ZnGsWebSocketTests context"
   | webSocket message gemServer |
   gemServer := self
     createGemServerMap: 'ws-status'

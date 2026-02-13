@@ -3,7 +3,7 @@ testEchoWebSocketsDotOrg
 	| webSocket message |
 	true
 		ifTrue: [ 
-			"echo.webserver.org is no longer available ...  is no longer available. See https://github.com/GsDevKit/zinc/issues/96"
+			"ws://echo.webserver.org is sending 301 response (premanently moved).  It has moved to secure alterantive wss://."
 			^ self ].
 	webSocket := self webSocketClass to: 'ws://echo.websocket.org'.
 	message := 'Greetings from Gemstone Smalltalk @ ' , TimeStamp now printString.
