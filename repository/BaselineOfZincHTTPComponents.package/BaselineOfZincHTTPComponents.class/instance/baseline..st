@@ -136,7 +136,11 @@ baseline: spec
 								loads: #('Core');
 								repository: 'github://GsDevKit/gsApplicationTools:master/repository' ];
 				baseline: 'NeoJSON'
-					with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/filetree' ];
+					with: [ spec repository: 'github://GsDevKit/NeoJSON:filetree/repository' ];
+				baseline:'XMLParser' 
+					with: [ spec repository: 'github://GsDevKit/XML-XMLParser:gemstone/filetree'];
+				baseline:'XMLWriter'
+					with: [ spec repository: 'github://GsDevKit/XML-XMLWriter:gemstone/filetree'];
 				yourself.
 			spec
 				package: 'SocketStream';
@@ -145,6 +149,9 @@ baseline: spec
 					with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
 				package: 'Zinc-WebSocket-Core'
 					with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
+				package: 'Zinc-AWS' with: [ spec requires: #('Zinc-HTTP' 'XMLParser' 'XMLWriter') ];
+				package: 'Zinc-SSO-OpenID-Core'
+					with: [ spec requires: #('Zinc-HTTP' 'XMLParser' 'XMLWriter') ];
 				package: 'Zinc-HTTP'
 					with: [ 
 							spec
